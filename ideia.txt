@@ -1,0 +1,16 @@
+Ideia: um programa simulando vendas em uma oficina
+
+Requisitos:
+
+linguagem: HTML,CSS,Java Script
+
+. crude de funcionários
+. separar cliente de funcionário, patrão 
+. simulador de estoque
+. interface palnejada
+. Utilização da arquitetura MVC
+. banco de dados em SQL
+. leitura de palanilhas 
+
+Anotações posteriores:
+
