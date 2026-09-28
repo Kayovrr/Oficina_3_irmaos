@@ -32,10 +32,24 @@ body.layout {
 }
 
 .topo button[name="marca superior"] {
-    color: rgb(12, 12, 12);
-    padding: 10px;
+    width: 150px;
+    height: 50px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
 }
 
+.topo button[name="marca superior"] img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+ 
 .topo button[name="quem somos"] {
     color: rgb(114, 25, 25);
     padding: 10px;
@@ -65,15 +79,8 @@ body.layout {
     justify-content: center;
     align-items: center;
 
-    background-color: #111;
+    background-color: #c7da21;
 }
-
-
-#logo3d {
-    width: 600px;
-    height: 500px;
-}
-
 
 .rodape {
     flex: 0 0 auto;

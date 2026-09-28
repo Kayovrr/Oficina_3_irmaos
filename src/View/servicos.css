@@ -1,0 +1,94 @@
+body.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.topo {
+    display: flex;
+    flex: 0 0 auto;
+
+    padding: 20px;
+
+    background-color: #3b3939;
+    color: rgb(243, 240, 240);
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.topo button[name="marca superior"] {
+    width: 150px;
+    height: 50px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.topo button[name="marca superior"] img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+}
+ 
+.topo button[name="quem somos"] {
+    color: rgb(114, 25, 25);
+    padding: 10px;
+}
+
+.topo button[name="servicos"] {
+    color: rgb(194, 48, 48);
+    padding: 10px;
+}
+
+.topo button[name="contato"] {
+    color: rgb(170, 9, 9);
+    padding: 10px;
+}
+
+.topo button[name="menu"] {
+    color: rgb(107, 0, 207);
+    padding: 10px;
+}
+
+
+.meio {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #14eb26;
+}
+
+.rodape {
+    flex: 0 0 auto;
+
+    padding: 10px;
+
+    background-color: #333;
+    color: rgb(187, 35, 35);
+
+    text-align: center;
+}
