@@ -7,34 +7,25 @@ body.layout {
 
 .topo {
     display: flex;
-    flex: 0 0 auto;
+    align-items: center;
 
-    padding: 20px;
+    min-height: 100px;
+    padding: 10px 5%;
 
     background-color: black;
     color: rgb(243, 240, 240);
 
-    align-items: center;
-    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .logo {
-    margin-right: auto;
+    margin: 0;
+    flex-shrink: 0;
 }
 
-.botoes {
-    display: flex;
-    gap: 10px;
-}
-
-.menu {
-    margin-left: 30px; 
-    align-items: center;
-}
-
-.topo button[name="marca superior"] {
-    width: 250px;
-    height: 100px;
+.logo button {
+    width: 180px;
+    height: 75px;
 
     padding: 0;
     border: none;
@@ -43,45 +34,67 @@ body.layout {
     cursor: pointer;
 }
 
-.topo button[name="marca superior"] img{
+.logo img {
     width: 100%;
     height: 100%;
 
     object-fit: contain;
     display: block;
 }
- 
-.botoes button,
-.menu button {
+
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-left: auto;
+}
+
+.botoes button {
+    width: 110px;
+    height: 50px;
+
+    padding: 0;
+
     background: transparent;
     color: #ddd;
+
     border: none;
-    padding: 22px 25px;
+
     font-weight: bold;
     cursor: pointer;
     position: relative;
-
 }
 
-.botoes button::after{
+.botoes button::after {
     content: "";
+
     position: absolute;
 
-    left: 0;
-    bottom: 10px;
+    left: 10%;
+    bottom: 8px;
+
     width: 0;
     height: 2px;
 
     background: #c0c0c0;
+
     transition: width 0.2s;
 }
 
-.botoes button:hover{
+.botoes button:hover {
     color: white;
 }
 
-.botoes button:hover::after{
-    width: 100%;
+.botoes button:hover::after {
+    width: 80%;
+}
+
+.menu {
+    display: none;
+
+    margin-left: 15px;
+    align-items: center;
 }
 
 .menu button {
@@ -90,14 +103,14 @@ body.layout {
 
     padding: 0;
 
-    background:transparent;
+    background: transparent;
     color: #c0c0c0;
 
     border: 1px solid #555;
     border-radius: 3px;
 
     font-size: 20px;
-    font-size: bold;
+    font-weight: bold;
 
     cursor: pointer;
     transition: 0.2s;
@@ -108,7 +121,6 @@ body.layout {
     border-color: #c0c0c0;
     box-shadow: 0 0 8px rgba(214, 201, 0, 0.35);
 }
-
 
 .meio {
     flex: 1;
@@ -130,4 +142,51 @@ body.layout {
     color: rgb(187, 35, 35);
 
     text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .topo {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+
+    .logo button {
+        width: 160px;
+        height: 65px;
+    }
+
+    .menu {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .botoes {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+        gap: 0;
+
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .botoes.ativo {
+        display: flex;
+    }
+
+    .botoes button {
+        width: 100%;
+        height: 45px;
+
+        padding: 0;
+
+        text-align: center;
+    }
+
+    .botoes button::after {
+        display: none;
+    }
 }
