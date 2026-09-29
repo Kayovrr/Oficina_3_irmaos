@@ -1,8 +1,9 @@
 import * as THREE from 'https://esm.sh/three@0.180.0';
 import { GLTFLoader } from 'https://esm.sh/three@0.180.0/examples/jsm/loaders/GLTFLoader.js';
 
+console.log("logo3d.js iniciou")
 const container = document.getElementById("logo3d");
-
+console.log("conteiner",container);
 const cena = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
@@ -46,9 +47,15 @@ const loader = new GLTFLoader();
 
 let logo;
 
+const caminhoLogo = new URL(
+    "../../public/imgs/logo1.glb",
+    import.meta.url
+).href;
+
+console.log("Caminho do GLB:", caminhoLogo);
 
 loader.load(
-    "../../public/imgs/logo1.glb",
+    caminhoLogo,
 
     function(gltf) {
 
@@ -97,6 +104,15 @@ loader.load(
 
         camera.lookAt(0, 0, 0);
 
+        console.log("Modelo adicionado à cena")
+
+    },
+
+    function(xhr) {
+        console.log(
+          "Carregando:",
+           (xhr.loaded / xhr.total * 100) + "%"
+        );
     },
 
     undefined,
