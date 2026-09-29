@@ -11,7 +11,7 @@ body.layout {
 
     padding: 20px;
 
-    background-color: #3b3939;
+    background-color: black;
     color: rgb(243, 240, 240);
 
     align-items: center;
@@ -24,16 +24,17 @@ body.layout {
 
 .botoes {
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 .menu {
-    margin-left: auto;
+    margin-left: 30px; 
+    align-items: center;
 }
 
 .topo button[name="marca superior"] {
-    width: 150px;
-    height: 50px;
+    width: 250px;
+    height: 100px;
 
     padding: 0;
     border: none;
@@ -50,26 +51,63 @@ body.layout {
     display: block;
 }
  
-.topo button[name="quem somos"] {
-    color: rgb(114, 25, 25);
-    padding: 10px;
+.botoes button,
+.menu button {
+    background: transparent;
+    color: #ddd;
+    border: none;
+    padding: 22px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+
 }
 
-.topo button[name="servicos"] {
-    color: rgb(194, 48, 48);
-    padding: 10px;
+.botoes button::after{
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+
+    background: #c0c0c0;
+    transition: width 0.2s;
 }
 
-.topo button[name="contato"] {
-    color: rgb(170, 9, 9);
-    padding: 10px;
+.botoes button:hover{
+    color: white;
 }
 
-.topo button[name="menu"] {
-    color: rgb(107, 0, 207);
-    padding: 10px;
+.botoes button:hover::after{
+    width: 100%;
 }
 
+.menu button {
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    background:transparent;
+    color: #c0c0c0;
+
+    border: 1px solid #555;
+    border-radius: 3px;
+
+    font-size: 20px;
+    font-size: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu button:hover {
+    background: #222;
+    border-color: #c0c0c0;
+    box-shadow: 0 0 8px rgba(214, 201, 0, 0.35);
+}
 
 .meio {
     flex: 1;
